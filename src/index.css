@@ -4,10 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* DESIGN TOKENS */
-
+/* =========================
+   🎨 DESIGN TOKENS
+========================= */
 :root {
-  /* Colors */
   --color-primary: #0a192f;
   --color-accent-cyan: #00ffff;
   --color-accent-magenta: #ff00ff;
@@ -17,25 +17,16 @@
   --color-text-main: #ffffff;
   --color-text-subtle: #8892b0;
 
-  /* Gradients */
   --gradient-primary: linear-gradient(90deg, #00ffff, #ff00ff);
-
-  /* Spacing (4px scale) */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 16px;
-  --space-4: 24px;
-  --space-5: 32px;
-  --space-6: 48px;
-  --space-7: 64px;
-  --space-8: 80px;
 }
 
-/* BASE STYLES */
-
+/* =========================
+   🌐 BASE STYLES
+========================= */
 @layer base {
   body {
-    @apply bg-[color:var(--color-bg)] text-[color:var(--color-text-main)] font-sans;
+    background: var(--color-bg);
+    color: var(--color-text-main);
     font-family: "Open Sans", sans-serif;
   }
 
@@ -44,35 +35,57 @@
   h3,
   h4 {
     font-family: "Montserrat", sans-serif;
-    @apply uppercase font-bold tracking-wide;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   h1 {
-    @apply text-5xl md:text-6xl lg:text-7xl;
+    font-size: clamp(3rem, 5vw, 4.5rem); /* ~48–72px */
   }
 
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    font-size: clamp(2.25rem, 4vw, 3rem); /* ~36–48px */
   }
 
   h3 {
-    @apply text-xl md:text-2xl lg:text-3xl;
+    font-size: clamp(1.5rem, 3vw, 2rem); /* ~24–32px */
   }
 
   p {
-    @apply text-base md:text-lg text-[color:var(--color-text-subtle)];
+    font-size: 1rem;
+    color: var(--color-text-subtle);
   }
 }
 
-/* LAYOUT UTILITIES */
-
+/* =========================
+   📐 LAYOUT HELPERS (NO @apply)
+========================= */
 @layer utilities {
   .container-custom {
-    @apply max-w-[1200px] xl:max-w-[1440px] mx-auto px-6;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (min-width: 1280px) {
+    .container-custom {
+      max-width: 1440px;
+    }
   }
 
   .section {
-    @apply py-16 md:py-24;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
   }
 
   .glass {
