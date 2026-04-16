@@ -18,7 +18,7 @@ function App() {
         <div>
           <h1>Staging Test</h1>
           <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+            Edit Very Much <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
         </div>
         <button
