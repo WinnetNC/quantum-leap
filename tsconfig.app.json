@@ -8,13 +8,11 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
 
-    "ignoreDeprecations": "6.0",
-    "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@pages/*": ["src/pages/*"],
-      "@config/*": ["src/config/*"]
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@config/*": ["./src/config/*"]
     },
 
     "moduleResolution": "bundler",
