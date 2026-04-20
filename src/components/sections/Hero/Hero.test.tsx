@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { describe, test, expect } from "vitest";
 import "@testing-library/jest-dom";
 import Hero from "./Hero";
 
