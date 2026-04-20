@@ -1,0 +1,21 @@
+{
+  "page": "home",
+  "sections": [
+    {
+      "id": "hero-1",
+      "type": "hero",
+      "props": {
+        "title": "Experience Tomorrow, Today",
+        "subtitle": "Quantum Leap redefines performance, intelligence, and immersion.",
+        "primaryCTA": {
+          "label": "Pre-Order Now",
+          "action": "preorder"
+        },
+        "secondaryCTA": {
+          "label": "Watch Demo",
+          "action": "demo"
+        }
+      }
+    }
+  ]
+}
