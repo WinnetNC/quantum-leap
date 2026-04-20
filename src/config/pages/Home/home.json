@@ -6,7 +6,7 @@
       "type": "hero",
       "props": {
         "title": "Experience Tomorrow, Today",
-        "subtitle": "Quantum Leap redefines performance, intelligence, and immersion.",
+        "subtitle": "Quantum Leap redefines performance.",
         "primaryCTA": {
           "label": "Pre-Order Now",
           "action": "preorder"
@@ -15,6 +15,14 @@
           "label": "Watch Demo",
           "action": "demo"
         }
+      }
+    },
+    {
+      "id": "features-1",
+      "type": "features",
+      "props": {
+        "title": "Power Meets Intelligence",
+        "features": []
       }
     }
   ]

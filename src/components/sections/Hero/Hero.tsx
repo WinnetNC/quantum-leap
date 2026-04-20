@@ -7,7 +7,7 @@ const Hero = ({
   secondaryCTA,
 }: HeroProps) => {
   return (
-    <section className="section grid justify-center text-center min-h-screen border">
+    <section className="section grid justify-center text-center min-h border">
       <div className="container-custom border">
         
         {/* Headline */}
@@ -16,7 +16,7 @@ const Hero = ({
         </h1>
 
         {/* Subtitle */}
-        <p className="mb-8 max-w-2xl mx-auto">
+        <p className="mb-6 max-w-2xl mx-auto">
           {subtitle}
         </p>
 
