@@ -43,6 +43,18 @@ export interface FAQProps {
   items: FAQItem[];
 }
 
+export interface ProductOption {
+  id: string;
+  label: string;
+  price: number;
+}
+
+export interface PreOrderForm {
+  email: string;
+  plan: string;
+  variant: string;
+}
+
 export type SectionConfig =
   | {
       id: string;

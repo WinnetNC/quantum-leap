@@ -1,3 +1,5 @@
+import { useState } from "react";
+import PreOrderModal from "../PreOrder/PreOrderModal";
 import type { HeroProps } from "../../../types/ui.types";
 
 const Hero = ({
@@ -6,6 +8,8 @@ const Hero = ({
   primaryCTA,
   secondaryCTA,
 }: HeroProps) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <section className="section flex items-center justify-center text-center min-h-screen">
       <div className="container-custom">
@@ -22,7 +26,9 @@ const Hero = ({
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="btn btn-primary">
+          <button className="btn btn-primary"
+          onClick={() => setOpen(true)}
+          >
             {primaryCTA.label}
           </button>
 
@@ -30,8 +36,10 @@ const Hero = ({
             {secondaryCTA.label}
           </button>
         </div>
-
       </div>
+
+      <PreOrderModal isOpen={open} onClose={() => setOpen(false)} />
+
     </section>
   );
 };
