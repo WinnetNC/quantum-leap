@@ -29,6 +29,26 @@ const Home = () => {
           );
         }
 
+        if (section.type === "howItWorks") {
+          const HowItWorksComponent = componentRegistry.howItWorks;
+
+          return (
+            <Suspense fallback={<div>Loading...</div>} key={section.id}>
+              <HowItWorksComponent {...section.props} />
+            </Suspense>
+          );
+        }
+
+        if (section.type === "faq") {
+          const FAQComponent = componentRegistry.faq;
+
+          return (
+            <Suspense fallback={<div>Loading...</div>} key={section.id}>
+              <FAQComponent {...section.props} />
+            </Suspense>
+          );
+        }
+
         return null;
       })}
     </div>

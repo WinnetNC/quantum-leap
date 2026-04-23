@@ -3,7 +3,7 @@ import type{ FeaturesProps } from "../../../types/ui.types";
 
 const Features = ({ title, features }: FeaturesProps) => {
   return (
-    <section className="section min-h-screen">
+    <section className="section">
       <div className="container-custom">
 
         <h2 className="section-title text-center">{title}</h2>

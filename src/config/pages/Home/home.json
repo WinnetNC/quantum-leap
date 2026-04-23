@@ -49,6 +49,47 @@
           }
         ]
       }
+    },
+    {
+      "id": "how-it-works-1",
+      "type": "howItWorks",
+      "props": {
+        "title": "How Quantum Leap Works",
+        "steps": [
+          {
+            "id": "s1",
+            "title": "Initialize",
+            "description": "Power up and sync instantly."
+          },
+          {
+            "id": "s2",
+            "title": "Adapt",
+            "description": "AI learns your behavior."
+          },
+          {
+            "id": "s3",
+            "title": "Accelerate",
+            "description": "Experience unmatched performance."
+          }
+        ]
+      }
+    },
+    {
+      "id": "faq-1",
+      "type": "faq",
+      "props": {
+        "title": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "What is Quantum Leap?",
+            "answer": "A next-gen AI-powered device."
+          },
+          {
+            "question": "When will it ship?",
+            "answer": "Early access begins soon."
+          }
+        ]
+      }
     }
   ]
 }
