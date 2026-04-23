@@ -22,7 +22,32 @@
       "type": "features",
       "props": {
         "title": "Power Meets Intelligence",
-        "features": []
+        "features": [
+          {
+            "id": "f1",
+            "title": "Quantum Processor",
+            "description": "Ultra-fast computing beyond traditional limits.",
+            "icon": "⚡"
+          },
+          {
+            "id": "f2",
+            "title": "Adaptive AI",
+            "description": "Learns and evolves with your behavior.",
+            "icon": "🧠"
+          },
+          {
+            "id": "f3",
+            "title": "Holographic Display",
+            "description": "Immersive visuals like never before.",
+            "icon": "🌀"
+          },
+          {
+            "id": "f4",
+            "title": "Seamless Connectivity",
+            "description": "Connect across all devices instantly.",
+            "icon": "🌐"
+          }
+        ]
       }
     }
   ]

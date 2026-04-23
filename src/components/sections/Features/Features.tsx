@@ -1,14 +1,11 @@
 import FeatureCard from "./FeatureCard";
-import type { FeaturesProps } from "../../../types/Feature.types";
-import featuresData from "@config/pages/Home/features.json";
+import type{ FeaturesProps } from "../../../types/ui.types";
 
-const Features = ({ title }: FeaturesProps) => {
-  const features = featuresData.props.features;
-
+const Features = ({ title, features }: FeaturesProps) => {
   return (
     <section className="section">
       <div className="container-custom">
-        
+
         <h2 className="section-title text-center">{title}</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

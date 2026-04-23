@@ -1,23 +1,35 @@
 import { Suspense } from "react";
 import homeConfig from "@config/pages/Home/home.json";
-import { componentRegistry } from "@components/registry/componentRegistry";
+import { componentRegistry } from "../../components/registry/componentRegistry";
+import type { PageConfig } from "../../types/ui.types";
+
+const typedConfig = homeConfig as PageConfig;
 
 const Home = () => {
   return (
     <div>
-      {homeConfig.sections.map((section) => {
-        const Component = componentRegistry[section.type];
+      {typedConfig.sections.map((section) => {
+        if (section.type === "hero") {
+          const HeroComponent = componentRegistry.hero;
 
-        if (!Component) {
-          console.warn(`Component not found for type: ${section.type}`);
-          return null;
+          return (
+            <Suspense fallback={<div>Loading...</div>} key={section.id}>
+              <HeroComponent {...section.props} />
+            </Suspense>
+          );
         }
 
-        return (
-          <Suspense fallback={<div>Loading...</div>} key={section.id}>
-            <Component {...section.props} />
-          </Suspense>
-        );
+        if (section.type === "features") {
+          const FeaturesComponent = componentRegistry.features;
+
+          return (
+            <Suspense fallback={<div>Loading...</div>} key={section.id}>
+              <FeaturesComponent {...section.props} />
+            </Suspense>
+          );
+        }
+
+        return null;
       })}
     </div>
   );

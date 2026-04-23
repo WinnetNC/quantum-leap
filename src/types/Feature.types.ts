@@ -1,11 +1,6 @@
-export interface Feature {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-}
+import type { Slots } from "./ui.types";
 
 export interface FeaturesProps {
   title: string;
-  features: Feature[];
+  slots?: Slots;
 }
