@@ -1,4 +1,4 @@
-import type { HeroProps } from "../../../types/Hero.types";
+import type { HeroProps } from "../../../types/ui.types";
 
 const Hero = ({
   title,
@@ -7,21 +7,21 @@ const Hero = ({
   secondaryCTA,
 }: HeroProps) => {
   return (
-    <section className="section grid justify-center text-center min-h-screen border">
-      <div className="container-custom border">
+    <section className="section flex items-center justify-center text-center min-h-screen">
+      <div className="container-custom">
         
         {/* Headline */}
-        <h1 className="mb-6 border">
+        <h1 className="mb-6">
           <span className="text-gradient">{title}</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="mb-8 max-w-2xl mx-auto">
+        <p className="mb-10 max-w-2xl mx-auto">
           {subtitle}
         </p>
 
         {/* CTA Buttons */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-4 p-2 border">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="btn btn-primary">
             {primaryCTA.label}
           </button>

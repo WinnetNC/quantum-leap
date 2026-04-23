@@ -1,15 +1,11 @@
 import { lazy } from "react";
-import type { ComponentType } from 'react';
-import type { HeroProps } from '../../types/Hero.types';
 
-/**
- * Lazy-loaded sections (performance ready)
- */
+// Lazy-loaded sections (performance ready)
 const Hero = lazy(() => import("../sections/Hero/Hero"));
+const Features = lazy(() => import("../sections/Features/Features"));
 
-/**
- * Registry map
- */
-export const componentRegistry: Record<string, ComponentType<HeroProps>> = {
+// Registry Map
+export const componentRegistry = {
   hero: Hero,
+  features: Features,
 };
